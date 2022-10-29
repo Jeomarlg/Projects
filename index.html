@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="styles.css" rel='stylesheet'>
+    <link href="actions.js" rel="stylesheet">
+    <title> CONTAINER </title>
+</head>
+<body>
+
+    <div class="form">
+        <input type="text" class="form__input" placeholder="Type anything...">
+      </div>
+
+    <div id="navbarContainer">
+
+        <div id="navbar">
+          <div id="bubbleWrapper">
+            <div id="bubble1" class="bubble"><span class="icon"><i class="bi bi-1-circle"></i></span></div>
+            <div id="bubble2" class="bubble"><span class="icon"><i class="bi bi-2-circle"></i></span></div>
+            <div id="bubble3" class="bubble"><span class="icon"><i class="bi bi-3-circle""></i></span></div>
+            <div id="bubble4" class="bubble"><span class="icon"><i class="bi bi-4-circle""></i></span></div>
+          </div>
+          <div id="menuWrapper">
+            <div id="menu1" class="menuElement" onclick="move('1', '50px', '#ffcc80')"> <i class="bi bi-1-circle"></i></div>
+            <div id="menu2" class="menuElement" onclick="move('2', '150px', '#81d4fa')"><i class="bi bi-2-circle"></i></div>
+            <div id="menu3" class="menuElement" onclick="move('3', '250px', '#c5e1a5')"><i class="bi bi-3-circle"></i></div>
+            <div id="menu4" class="menuElement" onclick="move('4', '350px', '#ce93d8')"><i class="bi bi-4-circle"></i></div>
+          </div>
+        </div>
+        <div id="bgWrapper">
+          <div id="bg"></div>
+          <div id="bgBubble"></div>
+        </div>
+      </div>
+      
+        <svg width="0" height="0" >
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" id="blurFilter"/>
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -15" result="goo" />
+              <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            </filter>
+          </defs>
+        </svg>      
+
+<script src="styles.css"></script>
+<script src="actions.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+<script  src="https://cdpn.io/cpe/boomboom/pen.js?key=pen.js-ec28c6d4-d825-e2aa-3d89-b562acffb8f9" crossorigin></script>
+</body>
+</html>
